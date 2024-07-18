@@ -234,6 +234,12 @@ function collitionsDetection() {
     }
 }
 
+// call the butor to restart 
+document.querySelector('#start').addEventListener('click', () => {
+    document.location.reload()
+});
+
+// clear the canvas in a new frame
 function clearCanvas() {
     // clear the canvas in a new frame
     ctx.clearRect(0, 0, canvas.width, canvas.height)

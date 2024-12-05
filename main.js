@@ -197,7 +197,6 @@ function moveBall() {
         y + dy > canvas.height - ballRadius // geme over
     ) {
         document.location.reload()
-        alert('GAME OVER')
     }
     // movement ball
     x += dx
@@ -220,7 +219,7 @@ function collitionsDetection() {
                     currentBricks.status = BRICK_STATUS.DESTROYED
                     let score = document.querySelector('#score-value')
                     let scoreValue = score.innerHTML++
-                    ctx.fillStyle = 'white'
+                    ctx.fillStyle = '#fff'
                     ctx.font = '20px Arial'
                     ctx.fillText(scoreValue, 10, 20)
                     if (bricksRowCount * bricksColumnCount === scoreValue) {
@@ -260,7 +259,7 @@ function draw() {
     moveBall()
 
 
-    // repeat the animation in 1/60th of a second
+    // repeat the animation in 1/60th of a secondf
     window.requestAnimationFrame(draw)
 }
 
